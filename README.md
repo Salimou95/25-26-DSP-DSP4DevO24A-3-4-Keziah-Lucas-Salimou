@@ -170,4 +170,113 @@ Optimisations intégrées :
 - Liaison avec véhicule, trajet et intervention
 ```
 
+### Phase 3 : Collaboration et Versionnement
+🤝 **Gestion professionnelle du projet avec Git/GitHub**
+
+**Objectifs** : Mettre en place une méthodologie de travail collaborative professionnelle utilisant l'écosystème Git/GitHub.
+
+**Pratiques mises en œuvre** :
+
+#### Gestion des branches
+- 🌿 **Branche `main`** : version stable et validée
+- 🔧 **Branches thématiques** : une branche par fonctionnalité ou membre de l'équipe
+  - Nomenclature : `feature/nom-fonctionnalite`, `fix/nom-correction`, `docs/description`
+  - Exemple : `feature/table-anomalie`, `docs/update-readme`
+
+#### Suivi des tâches
+- 📋 **GitHub Projects** : tableau Kanban avec colonnes (À faire, En cours, En revue, Terminé)
+- 🎫 **Issues** : 
+  - Une issue par tâche identifiée
+  - Labels appropriés
+  - Assignation aux membres de l'équipe
+
+
+#### Workflow de contribution
+1. **Création d'une issue** pour décrire la tâche
+2. **Création d'une branche** depuis `develop`
+3. **Développement** avec commits atomiques et descriptifs
+4. **Push** de la branche sur le dépôt distant
+5. **Pull Request** avec description détaillée
+6. **Code Review** par au moins un autre membre
+7. **Merge** après validation
+
+#### Qualité de l'historique Git
+
+- ✅ Messages descriptifs suivant la convention :
+  ```
+  type: description courte
+  
+  Description détaillée si nécessaire
+  
+  Fixes #<numéro-issue>
+  ```
+- ✅ Rebase interactif pour nettoyer l'historique avant merge
+- ✅ Pas de fichiers inutiles (utilisation de `.gitignore`)
+
+
+### Phase 4 : Livrables et Validation
+📦 **Rendu final du projet**
+
+**Structure attendue du dépôt** :
+```
+FleetControl/
+├── sql/
+│   ├── fleetcontrol_init.sql      ✅ Script initial (Phase 1)
+│   └── fleetcontrol_final.sql     🔄 Script avec anomalies (Phase 2)
+├── docs/
+│   ├── MCD.png                     ✅ Modèle Conceptuel de Données
+│   └── MLD.png                     ✅ Modèle Logique de Données
+├── README.md                        ✅ Documentation complète
+└── .gitignore                       ✅ Exclusions Git
+```
+
+**Critères de validation** :
+
+#### 1. Modélisation (40%)
+- ✅ MCD complet et cohérent
+- ✅ MLD conforme aux règles de dérivation
+- ✅ Normalisation 3FN respectée
+- ✅ Relations et cardinalités correctes
+
+#### 2. Implémentation SQL (30%)
+- ✅ Script `fleetcontrol_init.sql` fonctionnel
+- ✅ Script `fleetcontrol_final.sql` avec évolutions
+- ✅ Contraintes d'intégrité complètes (PK, FK, UNIQUE, CHECK)
+- ✅ Types de données appropriés
+- ✅ Gestion cohérente des ON DELETE/UPDATE
+
+#### 3. Collaboration Git/GitHub (20%)
+- ✅ Historique Git propre et structuré
+- ✅ Utilisation de branches thématiques
+- ✅ Pull Requests avec reviews
+- ✅ GitHub Projects complet et à jour
+- ✅ Issues liées aux commits
+- ✅ Pas de commits de merge inutiles
+
+#### 4. Documentation (10%)
+- ✅ README complet et professionnel
+- ✅ Justification des choix de conception
+- ✅ Explication des évolutions (Phase 2)
+- ✅ Instructions d'installation claires
+- ✅ Diagrammes MCD/MLD lisibles
+
+**Checklist finale avant rendu** :
+
+- [ ] Tous les scripts SQL s'exécutent sans erreur
+- [ ] Les diagrammes sont à jour et correspondent au code
+- [ ] Le README est complet avec toutes les sections
+- [ ] L'historique Git est nettoyé (pas de commits "WIP" ou "test")
+- [ ] Toutes les issues sont fermées ou documentées
+- [ ] Les Pull Requests sont mergées ou justifiées
+- [ ] Le dépôt ne contient pas de fichiers temporaires
+- [ ] Les membres de l'équipe sont crédités
+- [ ] Le projet est accessible publiquement sur GitHub
+
+**Modalités d'évaluation** :
+- 📊 Analyse du code et de la modélisation
+- 🔍 Review de l'historique Git complet
+- 👥 Évaluation de la répartition du travail (commits par membre)
+- 💬 Qualité des Pull Requests et des reviews
+- 📈 Utilisation effective de GitHub Projects
+
 ---
